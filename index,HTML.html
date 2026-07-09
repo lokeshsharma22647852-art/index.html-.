@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Balaji Iron</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5f6878;
+      --line: #d8dde6;
+      --steel: #344054;
+      --accent: #d97706;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    header {
+      background: #111827;
+      color: #ffffff;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: 0;
+      margin: 0;
+    }
+
+    .tagline {
+      margin: 0;
+      color: #d1d5db;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: clamp(2.5rem, 7vw, 5.5rem) 0;
+      background:
+        linear-gradient(135deg, rgba(17, 24, 39, 0.88), rgba(52, 64, 84, 0.74)),
+        repeating-linear-gradient(135deg, #6b7280 0 8px, #4b5563 8px 16px);
+      color: #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: 0;
+      color: #e5e7eb;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.65;
+    }
+
+    .contact-panel {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--ink);
+      border-radius: 0.5rem;
+      padding: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .contact-panel h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+      color: var(--steel);
+    }
+
+    .contact-panel p {
+      margin: 0.45rem 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    main {
+      padding: 2rem 0 3rem;
+    }
+
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .product {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      min-height: 132px;
+    }
+
+    .product h3 {
+      margin: 0 0 0.5rem;
+      color: var(--steel);
+      font-size: 1.05rem;
+    }
+
+    .product p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .note {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-left: 4px solid var(--accent);
+      background: #fff7ed;
+      color: #7c2d12;
+    }
+
+    footer {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: #ffffff;
+    }
+
+    @media (max-width: 760px) {
+      .topbar,
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <div>
+        <h1 class="brand">Shri Balaji Iron</h1>
+        <p class="tagline">Steel and iron material supplier</p>
+      </div>
+      <p class="tagline">Jaipur and nearby regions</p>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <h2 id="hero-title">Reliable iron and steel supply for local projects</h2>
+        <p>We support contractors, fabricators, workshops, and builders with practical material availability and dependable service.</p>
+      </div>
+      <aside class="contact-panel" aria-label="Business details">
+        <h3>Business Enquiry</h3>
+        <p>Call or visit for current stock, rates, and delivery details.</p>
+        <p>Structural steel, sheets, bars, pipes, and related materials.</p>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+      <h2 class="section-title">Products</h2>
+      <div class="product-grid">
+        <article class="product">
+          <h3>Iron and Steel Sections</h3>
+          <p>Angles, channels, flats, beams, and project-ready structural material.</p>
+        </article>
+        <article class="product">
+          <h3>Pipes and Tubes</h3>
+          <p>Common steel pipe and tube sizes for fabrication and construction work.</p>
+        </article>
+        <article class="product">
+          <h3>Sheets and Plates</h3>
+          <p>Material options for gates, frames, machine work, and commercial use.</p>
+        </article>
+      </div>
+      <div class="note">For accurate pricing and availability, contact the shop directly before placing an order.</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">Shri Balaji Iron</div>
+  </footer>
+</body>
+</html>
